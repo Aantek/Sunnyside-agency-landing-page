@@ -4,23 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  
 </head>
 <body>
-  <nav class="">
-    <div class="container mx-auto p-4">
-      <div class="flex justify-between items-center">
-        <img src="../assets/images/logo.svg">
-        <ul class="flex space-x-4">
-          <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
-          <li><a href="#" class="text-white hover:text-gray-300">About</a></li>
-          <li><a href="#" class="text-white hover:text-gray-300">Services</a></li>
-          <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
-        </ul>
+  <section id="hero" class="md:pb-24 xl:pb-64 2xl:pb-96">
+    <div class="min-w-full container p-4 space-y-12">
+      <div class="flex justify-between items-center mb-20 p-6">
+        <img src="../assets/images/logo.svg" class="px-4 py-2">
+          <div class="hidden md:flex space-x-8 font-barlow text-xl">
+            <a href="#" class="text-white hover:text-black hover:rounded-full hover:bg-white px-4 py-2">About</a>
+            <a href="#" class="text-white hover:text-black hover:rounded-full hover:bg-white px-4 py-2">Services</a>
+            <a href="#" class="text-white hover:text-black hover:rounded-full hover:bg-white px-4 py-2">Projects</a>
+            <a href="#" class="text-white hover:text-black hover:rounded-full hover:bg-white px-4 py-2">Contact</a>
+          </div>   
+          <div class="md:hidden">
+            <button class="z-40 block hamburger md:hidden focus:outline-none" id="menu-btn" type="button" onclick="buttonClicked()">
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
+          <div id="menu" class="md:hidden font-barlow absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-[#3ebfff]">
+            <a href="#" class="hover:text-pink-500">About</a>
+            <a href="#" class="hover:text-pink-500">Services </a>
+            <a href="#" class="hover:text-pink-500">Projects</a>
+            <a href="#" class="hover:text-pink-500">Contact</a>
+          </div>
+      </div>    
+      <div class="flex justify-center items-center flex-col gap-y-16 pb-32">
+        <h1 class="text-white uppercase font-fraunces text-6xl tracking-widest text-center">we are creatives</h1>
+        <img src="../assets/images/icon-arrow-down.svg" class="text-white h-32 md:block" id="downarrowimg">
       </div>
     </div>
-  </nav>
+  </section>
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="flex flex-col justify-center items-center lg:order-1 order-2">
+        <div class="flex flex-col items-center w-1/2 text-center lg:text-left space-y-8 py-12 lg:py-0">
+          <h1 class="text-4xl lg:text-4xl xl:text-6xl font-fraunces text-center lg:text-left">Transform your brand</h1>
+          <p class="lg:text-normal xl:text-xl font-barlow text-gray-500 ">We are a full-servie creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you</p>
+          <p class="font-bold uppercase text-xl font-fraunces w-full py-4">learn more</p>
+        </div>
+    </div>
+    <div class="lg:order-2 order-1">
+      <img src="/assets/images/desktop/image-transform.jpg" class="w-full">
+    </div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="order-1">
+      <img src="/assets/images/desktop/image-stand-out.jpg" class="w-full">
+    </div>
+    <div class="flex flex-col justify-center items-center order-2">
+        <div class="flex flex-col items-center w-1/2 text-center lg:text-left space-y-8 py-12 lg:py-0">
+          <h1 class="text-4xl lg:text-4xl xl:text-6xl font-fraunces text-center lg:text-left">Stand out to the right audience</h1>
+          <p class="lg:text-normal xl:text-xl font-barlow text-gray-500 ">Using a collaboratie formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</p>
+          <p class="font-bold uppercase text-xl font-fraunces w-full py-4">learn more</p>
+        </div>
+    </div>
+  </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 relative">
+      <div class="relative">
+        <img src="../assets/images/desktop/image-graphic-design.jpg" alt="cherries_pic" class="w-full">
+        <div class="absolute w-full bg-opacity-50 text-white p-2" id="description1">
+          <h1 class="font-fraunces text-3xl text-center text-[#25564B] py-6">Graphic design</h1>
+          <p class="font-fraunces text-normal text-center text-[#25564B] lg:px-14 xl:px-32 2xl:px-64">Great design makes you memorable. We deliver artwork tat underscores your brans message and captures ptential clients' attention</p>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="../assets/images/desktop/image-photography.jpg" alt="cherries_pic" class="w-full">
+        <div class="absolute w-full bg-opacity-50 text-white p-2" id="description2">
+          <h1 class="font-fraunces text-3xl text-center text-[#19536B] py-6">Photography</h1>
+          <p class="font-fraunces text-normal text-center text-[#19536B] lg:px-14 xl:px-32 2xl:px-64">Increase your credibility by getting the most stunning, high-quality photos that improve your business image</p>
+        </div>
+      </div>
+    </div>
+  </div>
   
   
-  
+  <script src="script.js"></script>
 </body>
 </html>

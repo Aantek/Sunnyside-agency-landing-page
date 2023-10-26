@@ -1,14 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-nav{
-    background-image: url('../assets/images/desktop/image-header.jpg');
-    background-size: auto 100%;
+/* pomiedzy 576 a 1536 */
+#hero{
+    background-image:  url('../assets/images/desktop/image-header.jpg');
+    background-size: contain; 
+    background-position: bottom;
     background-repeat: no-repeat;
-    
+    background-color: #3ebfff;
+}
+
+/* 576 i w dol */
+@media(max-width: 576px){
+    #hero{ 
+        background-image: url('../assets/images/mobile/image-header.jpg');
+        background-size: contain; 
+        background-repeat: no-repeat;
+    } 
+}
+
+.open{
+    transform: rotate(90deg);
+
+} 
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+.open .hamburger-middle{
+    display: none;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburger-bottom, .hamburger-middle, .hamburger-top{
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transform: rotate(0);
+    transition: all 0.5s;
+
+}
+.hamburger-middle{
+    transform: translateY(7px);
+}
+.hamburger-bottom{
+    transform: translateY(14px);
+}
+#description1{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+#description2{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+@media(max-width: 1836px){
+    #description1, #description2{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
 }
