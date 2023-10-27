@@ -794,6 +794,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pb-32{
   padding-bottom: 8rem;
 }
@@ -856,6 +861,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -898,6 +908,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* pomiedzy 576 a 1536 */
 
 #hero{
@@ -913,7 +928,7 @@ video {
 @media(max-width: 576px){
   #hero{
     background-image: url('../assets/images/mobile/image-header.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }
@@ -984,10 +999,6 @@ video {
   }
 }
 
-body{
-  position: absolute;
-}
-
 .hover\:rounded-full:hover{
   border-radius: 9999px;
 }
@@ -1037,6 +1048,16 @@ body{
     padding-bottom: 1.5rem;
   }
 
+  .md\:py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .md\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .md\:pb-24{
     padding-bottom: 6rem;
   }
@@ -1044,6 +1065,11 @@ body{
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 

@@ -4,6 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    }
 /* pomiedzy 576 a 1536 */
 #hero{
     background-image:  url('../assets/images/desktop/image-header.jpg');
@@ -81,8 +86,4 @@
         left: 50%;
         transform: translate(-50%, 0%);
     }
-}
-
-body{
-    position: absolute;
 }
