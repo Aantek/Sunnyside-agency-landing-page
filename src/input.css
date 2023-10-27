@@ -17,7 +17,7 @@
 @media(max-width: 576px){
     #hero{ 
         background-image: url('../assets/images/mobile/image-header.jpg');
-        background-size: contain; 
+        background-size: cover; 
         background-repeat: no-repeat;
     } 
 }
@@ -83,3 +83,6 @@
     }
 }
 
+body{
+    position: absolute;
+}
